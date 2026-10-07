@@ -1,0 +1,31 @@
+{
+  "ruleId": "HR-003",
+  "purpose": "命中判定条款的条目应留下整改闭环信息（字段清单由本机构配置，无逐字核实的国家条款）",
+  "configure": {
+    "HR-003": {
+      "requiredFields": [
+        "整改措施",
+        "整改责任人",
+        "整改完成时间"
+      ]
+    }
+  },
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "HR-003-compliant.json",
+      "expect": {
+        "ruleId": "HR-003",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "HR-003-unsafe.json",
+      "expect": {
+        "ruleId": "HR-003",
+        "count": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "ruleId": "HR-001",
+  "purpose": "台账条目应能定位到判定标准的具体条款；无法定位的条目必须显式列出，避免漏检被读成没问题",
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "HR-001-compliant.json",
+      "expect": {
+        "ruleId": "HR-001",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "HR-001-unsafe.json",
+      "expect": {
+        "ruleId": "HR-001",
+        "count": 1
+      }
+    }
+  ]
+}

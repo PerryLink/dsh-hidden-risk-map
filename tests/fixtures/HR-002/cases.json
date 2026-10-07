@@ -1,0 +1,27 @@
+{
+  "ruleId": "HR-002",
+  "purpose": "命中条款应核对是否为本企业所属行业条款；涉及危化品/消防/燃气/特种设备的按标准第二条适用其他规定",
+  "configure": {
+    "HR-002": {
+      "industry": "机械"
+    }
+  },
+  "pairs": [
+    {
+      "name": "expected-state",
+      "material": "HR-002-compliant.json",
+      "expect": {
+        "ruleId": "HR-002",
+        "count": 0
+      }
+    },
+    {
+      "name": "difference-present",
+      "material": "HR-002-unsafe.json",
+      "expect": {
+        "ruleId": "HR-002",
+        "count": 1
+      }
+    }
+  ]
+}
