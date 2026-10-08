@@ -41,8 +41,7 @@ a major accident hazard, which needs a site visit and professional judgement.
 ## Install
 
 ```sh
-pnpm pack
-dsh plugin --profile <name> add ./*.tgz
+dsh plugin --profile <name> add dsh-hidden-risk-map
 dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
 ```
 

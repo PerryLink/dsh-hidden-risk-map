@@ -50,8 +50,7 @@ finding names the article it came from.
 ## Install
 
 ```sh
-pnpm pack
-dsh plugin --profile <name> add ./dsh-hidden-risk-map-0.1.0.tgz
+dsh plugin --profile <name> add dsh-hidden-risk-map
 dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
 ```
 
