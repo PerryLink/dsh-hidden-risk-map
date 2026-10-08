@@ -149,17 +149,8 @@ rules:
             - 打叶复烤
             - 卷烟
         - article: 第十一条
-          industry: 商贸
-          excerpt: 商贸企业有下列情形之一的，应当判定为重大事故隐患
-          keywords:
-            - 商贸
-            - 商场
-            - 批发市场
-            - 仓储
-            - 冷库
-        - article: 第十二条
           industry: 粉尘涉爆
-          excerpt: 粉尘涉爆企业有下列情形之一的，应当判定为重大事故隐患
+          excerpt: 存在粉尘爆炸危险的工贸企业有下列情形之一的，应当判定为重大事故隐患
           keywords:
             - 粉尘涉爆
             - 除尘系统
@@ -167,7 +158,7 @@ rules:
             - 铝镁粉尘
             - 木粉尘
             - 静电
-        - article: 第十三条
+        - article: 第十二条
           industry: 使用液氨制冷
           excerpt: 使用液氨制冷的工贸企业有下列情形之一的，应当判定为重大事故隐患
           keywords:
@@ -175,7 +166,7 @@ rules:
             - 氨制冷
             - 冷库
             - 氨气泄漏
-        - article: 第十四条
+        - article: 第十三条
           industry: 有限空间作业
           excerpt: 存在硫化氢、一氧化碳等中毒风险的有限空间作业的工贸企业有下列情形之一的，应当判定为重大事故隐患
           keywords:

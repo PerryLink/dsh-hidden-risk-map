@@ -104,7 +104,7 @@ describe('rule pack', () => {
     const catalogue = ruleset.rules.find((rule) => rule.id === 'HR-001')?.params.clauses
     expect(Array.isArray(catalogue)).toBe(true)
     const clauses = catalogue as { article: string; industry: string; keywords: string[] }[]
-    expect(clauses.length).toBeGreaterThanOrEqual(12)
+    expect(clauses.length).toBe(11)
     expect(clauses[0]?.article).toBe('第三条')
     expect(clauses.some((clause) => clause.industry === '机械')).toBe(true)
     for (const clause of clauses) {
