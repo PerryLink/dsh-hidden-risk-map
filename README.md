@@ -1,4 +1,23 @@
-# dsh-hidden-risk-map
+# dsh-hidden-risk-map — Hazard ledger entry mapping onto candidate clauses of the major-accident-hazard determination standard
+
+`dsh-hidden-risk-map` reads one safety hazard ledger — one row per recorded hazard, with the columns that ledger actually carries — and maps each row onto candidate clauses of the major-accident-hazard determination standard by literal keyword matching over the text of fields such as `隐患描述`, and reports that index's own gaps rather than any judgement: the rows that matched no clause at all, the matched rows whose clause belongs to another industry or touches hazardous chemicals, fire, gas or special equipment that article 2 hands to other provisions, the matched rows missing the remediation-closure fields the institution configured, and the clauses hit by more rows than the configured ceiling. Every finding names the article it came from; the output is leads for review, the ledger's keyword table is an editorial aid rather than standard text, and a check that could not run states its reason in `skipped` instead of passing in silence.
+
+## What it answers
+
+| You ask | What it answers |
+|---|---|
+| The ledger was run and no clause was flagged — does that mean no major accident hazard? | No. The tool's headline count is the rows it could not map, not a zero-hazard verdict. `HR-001` lists every row whose text matched no clause keyword: a different industry's clause, a hazard type governed by other provisions, or wording the keyword table does not carry yet. It reports only that no clause could be located, and it does not decide whether that row is or is not a major accident hazard. |
+| An export carries a serial number and a date, but no column named `隐患描述`. | The reader refuses the material instead of guessing; it never promotes the longest field to be the hazard text. With none of `隐患描述`, `隐患内容`, `问题描述`, `检查内容`, `描述`, `text`, `description`, `content` or `hazard` present it names the columns it did see (or reports that there were none) and states that no usable hazard-description text exists, so the check does not run and nothing - not even `HR-001`'s unmapped list - is read as a pass. |
+| The row is written 液氨制冷机房未设置氨气泄漏监测报警装置 — why is it not mapped? | `HR-001` matches keywords literally, because whether a sentence is about ammonia leakage is the reviewer's call and not a fuzzy text judgement. A row about 液氨 is mapped only when your keyword table carries that wording; the lemma carries it under 第十二条 (industry 使用液氨制冷). The keyword lists are an editorial aid written for this plugin, not standard text, so add your site's own vocabulary to `keywords` when the wording differs. |
+| A row mentions 消防 or 特种设备, and the standard is quoted at me as its basis. | That is `HR-002` working, and it does not classify the row. Article 2 hands hazardous chemicals, fire, gas and special equipment to other provisions, so the rule quotes that sentence and reports the row as "check the corresponding regulation" instead of mapping it. Only when this deployment's `industry` is configured does it also flag a matched clause that belongs to another industry; if `industry` is empty, it says in `skipped` that the industry check did not run rather than passing quietly. |
+| The ledger rows carry no 整改措施, 整改责任人 or 整改完成时间 columns. | That is `HR-003` only after those names are configured: `requiredFields` empty means the check does not run and the rule reports itself in `skipped`. Once configured, a matched row missing one of those columns is reported. The rule checks that the columns exist — it does not judge whether the remediation is adequate or whether the item has been closed out. |
+| Many rows of the ledger hit 第三条, including a few that look like the same defect written twice. | `HR-004` groups the matches by article and reports when one article is hit by more rows than `maxHitsPerClause` allows, listing the row numbers. It is an `info`-level lead for human review: deciding whether that is a duplicate entry or a systematic defect stays with the reviewer. An unset `maxHitsPerClause` (0) means the rule does not run, and it says so in `skipped`. |
+
+## Standards it follows
+
+| Document | Number | Cited by rules |
+|---|---|---|
+| 《工贸企业重大事故隐患判定标准》 | 应急管理部令第10号 | HR-001, HR-002, HR-003, HR-004 |
 
 **Boundary:** this plugin maps each row of a **safety hazard ledger** onto candidate clauses of the
 major-accident-hazard determination standard, and reports which rows could not be mapped at all. It is

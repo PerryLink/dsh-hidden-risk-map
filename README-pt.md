@@ -1,4 +1,23 @@
-# dsh-hidden-risk-map
+# dsh-hidden-risk-map — Correspondência entre linhas de um registo de riscos e os artigos candidatos da norma de determinação de riscos maiores
+
+`dsh-hidden-risk-map` lê um registo de riscos —uma linha por risco registado, com as colunas que esse registo realmente traz— e encaminha cada linha para os artigos candidatos da norma chinesa de determinação de riscos maiores (《工贸企业重大事故隐患判定标准》, 应急管理部令第10号) através de correspondência literal de palavras-chave sobre o texto de campos como `隐患描述`, e reporta as lacunas do próprio registo, não um juízo: as linhas que não corresponderam a artigo nenhum, as linhas cuja correspondência pertence a outra indústria ou toca produtos químicos perigosos, incêndio, gás ou equipamento especial que o artigo 2 remete para outras disposições, as linhas correspondidas às quais faltam os campos de fecho da correção configurados pela instituição, e os artigos atingidos por mais linhas do que o limite configurado. Cada achado nomeia o artigo de onde veio; o resultado são pistas para revisão, a tabela de palavras-chave é um auxiliar editorial e não texto da norma, e a verificação que não pôde ser executada declara o motivo em `skipped` em vez de passar em silêncio.
+
+## O que ele responde
+
+| Você pergunta | O que ele responde |
+|---|---|
+| O registo foi executado e nenhum artigo foi assinalado — isso significa que não há riscos maiores? | Não. O número principal da ferramenta é a contagem de linhas que não conseguiu mapear, não um veredicto de zero riscos. `HR-001` lista cada linha cujo texto não correspondeu a nenhuma palavra-chave: um artigo de outra indústria, um tipo de risco regido por outras disposições, ou uma redação que a tabela de palavras-chave ainda não cobre. Apenas informa que não foi possível localizar artigo algum, e não decide se essa linha constitui ou não um risco maior. |
+| A exportação traz um número de série e uma data, mas nenhuma coluna chamada `隐患描述`. | O leitor recusa o material em vez de adivinhar; nunca promove o campo mais longo a texto do risco. Se não estiver nenhuma de `隐患描述`, `隐患内容`, `问题描述`, `检查内容`, `描述`, `text`, `description`, `content` ou `hazard`, nomeia as colunas que viu (ou indica que não havia nenhuma) e declara que não existe texto de descrição utilizável, pelo que a verificação não é executada e nada — nem a lista de não mapeados de `HR-001` — é lido como aprovação. |
+| A linha diz 液氨制冷机房未设置氨气泄漏监测报警装置 — porque não é mapeada? | `HR-001` compara palavras-chave de forma literal, porque decidir se uma frase fala de fuga de amoníaco cabe ao revisor e não a um juízo difuso do texto. Uma linha sobre 液氨 só é mapeada quando a sua tabela de palavras-chave contém essa redação; esta tabela inclui-a em 第十二条 (industry 使用液氨制冷). As listas de palavras-chave são um auxiliar editorial escrito para este complemento, não texto da norma: acrescente a `keywords` o vocabulário da sua instalação quando a redação diferir. |
+| Uma linha menciona 消防 ou 特种设备, e citam-me a norma como seu fundamento. | Isso é o `HR-002` a funcionar, e não classifica a linha. O artigo 2 remete os produtos químicos perigosos, o incêndio, o gás e o equipamento especial para outras disposições, por isso a regra cita essa frase e reporta a linha como «consulte a disposição correspondente» em vez de a mapear. Só quando o `industry` desta instalação está configurado assinala também um artigo correspondido que pertence a outra indústria; se `industry` estiver vazio, diz em `skipped` que a pertença setorial não foi verificada em vez de passar em silêncio. |
+| As linhas do registo não trazem colunas `整改措施`, `整改责任人` nem `整改完成时间`. | Isso só diz respeito ao `HR-003` depois de configurar esses nomes: `requiredFields` vazio significa que a verificação não é executada e a regra declara-se em `skipped`. Uma vez configurada, cada linha correspondida à qual falte uma dessas colunas é reportada. A regra verifica que as colunas existem: não julga se a correção é adequada nem se o assunto foi encerrado. |
+| Muitas linhas do registo atingem 第三条, e várias parecem o mesmo defeito escrito duas vezes. | `HR-004` agrupa as correspondências por artigo e reporta quando um artigo recebe mais linhas do que `maxHitsPerClause` permite, com a lista dos números de linha. É uma pista de nível `info` para revisão humana: decidir se isso é um registo duplicado ou um defeito sistemático continua a ser do revisor. Um `maxHitsPerClause` não configurado (0) significa que a regra não é executada, e di-lo em `skipped`. |
+
+## Normas que segue
+
+| Documento | Número | Regras que o citam |
+|---|---|---|
+| 《工贸企业重大事故隐患判定标准》 | 应急管理部令第10号 | HR-001, HR-002, HR-003, HR-004 |
 
 **Boundary:** this plugin maps each row of a **safety hazard ledger** onto candidate clauses of the
 major-accident-hazard determination standard, and reports which rows could not be mapped at all. It is
