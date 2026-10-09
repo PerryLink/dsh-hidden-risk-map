@@ -1,6 +1,14 @@
 # dsh-hidden-risk-map — Correspondência entre linhas de um registo de riscos e os artigos candidatos da norma de determinação de riscos maiores
 
+[![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+
 `dsh-hidden-risk-map` lê um registo de riscos —uma linha por risco registado, com as colunas que esse registo realmente traz— e encaminha cada linha para os artigos candidatos da norma chinesa de determinação de riscos maiores (《工贸企业重大事故隐患判定标准》, 应急管理部令第10号) através de correspondência literal de palavras-chave sobre o texto de campos como `隐患描述`, e reporta as lacunas do próprio registo, não um juízo: as linhas que não corresponderam a artigo nenhum, as linhas cuja correspondência pertence a outra indústria ou toca produtos químicos perigosos, incêndio, gás ou equipamento especial que o artigo 2 remete para outras disposições, as linhas correspondidas às quais faltam os campos de fecho da correção configurados pela instituição, e os artigos atingidos por mais linhas do que o limite configurado. Cada achado nomeia o artigo de onde veio; o resultado são pistas para revisão, a tabela de palavras-chave é um auxiliar editorial e não texto da norma, e a verificação que não pôde ser executada declara o motivo em `skipped` em vez de passar em silêncio.
+
+## Como é a saída
+
+![Terminal demo of dsh-hidden-risk-map: real output over its HR-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-demo.png)
+
+Saída real deste plugin sobre o seu próprio fixture de teste `HR-004` — não é uma simulação. O pacote de regras não inventa citações, por isso cada achado nomeia a cláusula aplicada e avisa que o seu texto não foi obtido.
 
 ## O que ele responde
 
