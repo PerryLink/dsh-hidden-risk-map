@@ -1,0 +1,14 @@
+[
+  {
+    "path": "docs/assets/dsh-hidden-risk-map-hero.png",
+    "kind": "hero",
+    "alt": "dsh-hidden-risk-map terminal output",
+    "caption": "Real dsh-hidden-risk-map checker output; 32 tests passed."
+  },
+  {
+    "path": "docs/assets/dsh-hidden-risk-map-demo.gif",
+    "kind": "demo",
+    "alt": "Animated dsh-hidden-risk-map terminal session",
+    "caption": "The same run, assembled line by line."
+  }
+]
