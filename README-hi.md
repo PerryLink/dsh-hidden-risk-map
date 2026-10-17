@@ -4,6 +4,13 @@
 
 `dsh-hidden-risk-map` एक सुरक्षा-जोखिम रजिस्टर पढ़ता है — हर दर्ज जोखिम की एक पंक्ति, उन स्तंभों के साथ जो वह रजिस्टर वास्तव में रखता है — और `隐患描述` जैसे क्षेत्रों के पाठ पर शब्दशः कीवर्ड मिलान द्वारा हर पंक्ति को चीनी बृहत् दुर्घटना-जोखिम निर्धारण मानक (《工贸企业重大事故隐患判定标准》, 应急管理部令第10号) के संभावित अनुच्छेदों तक ले जाता है, और किसी निर्णय के बजाय रजिस्टर की अपनी कमियाँ दर्ज करता है: वे पंक्तियाँ जो किसी अनुच्छेद से मेल नहीं खाईं, वे मिलान-पंक्तियाँ जिनका अनुच्छेद किसी दूसरे उद्योग का है या खतरनाक रसायन, अग्नि, गैस या विशेष उपकरण से जुड़ा है जिन्हें अनुच्छेद 2 अन्य प्रावधानों को सौंपता है, वे मिलान-पंक्तियाँ जिनमें संस्था द्वारा कॉन्फ़िगर किए गए सुधार-समापन क्षेत्र नहीं हैं, और वे अनुच्छेद जिन्हें कॉन्फ़िगर की गई सीमा से अधिक पंक्तियाँ छूती हैं। हर निष्कर्ष उस अनुच्छेद का नाम लेता है जिससे वह आया; परिणाम समीक्षा के लिए सुराग हैं, कीवर्ड तालिका एक संपादकीय सहायता है मानक का पाठ नहीं, और जो जाँच चल नहीं सकी वह चुपचाप पास होने के बजाय `skipped` में अपना कारण बताती है।
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-hidden-risk-map
+dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
+```
+
 ## आउटपुट कैसा दिखता है
 
 ![Terminal demo of dsh-hidden-risk-map: real output over its HR-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-hero.png)
@@ -66,13 +73,6 @@ a major accident hazard, which needs a site visit and professional judgement.
 ## What it does
 
 नियम-सूची, फ़ील्ड और विस्तृत व्यवहार [README.md](README.md#what-it-does) (अंग्रेज़ी मुख्य संस्करण) में हैं। यह प्लगइन केवल उद्धृत धाराओं के सामने शाब्दिक अंतर सूचीबद्ध करता है और हर न चल पाई जाँच को `skipped` में बताता है।
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-hidden-risk-map
-dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
-```
 
 ## Configuration
 

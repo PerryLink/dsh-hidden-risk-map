@@ -4,6 +4,13 @@
 
 `dsh-hidden-risk-map` reads one safety hazard ledger — one row per recorded hazard, with the columns that ledger actually carries — and maps each row onto candidate clauses of the major-accident-hazard determination standard by literal keyword matching over the text of fields such as `隐患描述`, and reports that index's own gaps rather than any judgement: the rows that matched no clause at all, the matched rows whose clause belongs to another industry or touches hazardous chemicals, fire, gas or special equipment that article 2 hands to other provisions, the matched rows missing the remediation-closure fields the institution configured, and the clauses hit by more rows than the configured ceiling. Every finding names the article it came from; the output is leads for review, the ledger's keyword table is an editorial aid rather than standard text, and a check that could not run states its reason in `skipped` instead of passing in silence.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-hidden-risk-map
+dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
+```
+
 ## What it looks like
 
 ![Terminal demo of dsh-hidden-risk-map: real output over its HR-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-hero.png)
@@ -75,13 +82,6 @@ finding names the article it came from.
 | `HR-002` | a matched clause belongs to this deployment's industry, or defers to another regime | warn | direct |
 | `HR-003` | a matched row carries the configured remediation fields (off by default) | warn | principle |
 | `HR-004` | one clause hit by many rows is flagged for review (off by default) | info | principle |
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-hidden-risk-map
-dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
-```
 
 ## Configuration
 

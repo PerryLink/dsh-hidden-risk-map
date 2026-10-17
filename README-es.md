@@ -4,6 +4,13 @@
 
 `dsh-hidden-risk-map` lee un registro de riesgos —una fila por riesgo registrado, con las columnas que ese registro realmente trae— y lleva cada fila a los artículos candidatos de la norma china de determinación de riesgos mayores (《工贸企业重大事故隐患判定标准》, 应急管理部令第10号) mediante coincidencia literal de palabras clave sobre el texto de campos como `隐患描述`, e informa de las carencias del propio registro, no de un juicio: las filas que no coincidieron con ningún artículo, las filas cuya coincidencia pertenece a otra industria o toca productos químicos peligrosos, incendio, gas o equipo especial que el artículo 2 remite a otras disposiciones, las filas coincidentes a las que faltan los campos de cierre de la corrección configurados por la institución, y los artículos golpeados por más filas que el tope configurado. Cada hallazgo nombra el artículo del que procede; el resultado son pistas para revisión, la tabla de palabras clave es una ayuda editorial y no texto de la norma, y la comprobación que no pudo ejecutarse expone su motivo en `skipped` en lugar de pasar en silencio.
 
+## Install
+
+```sh
+dsh plugin --profile <name> add dsh-hidden-risk-map
+dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
+```
+
 ## Cómo se ve la salida
 
 ![Terminal demo of dsh-hidden-risk-map: real output over its HR-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-hero.png)
@@ -66,13 +73,6 @@ a major accident hazard, which needs a site visit and professional judgement.
 ## What it does
 
 La tabla de reglas, los campos y el comportamiento detallado están en [README.md](README.md#what-it-does) (versión principal en inglés). El plugin sólo enumera divergencias literales frente a las cláusulas citadas e indica en `skipped` cada comprobación que no pudo ejecutarse.
-
-## Install
-
-```sh
-dsh plugin --profile <name> add dsh-hidden-risk-map
-dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
-```
 
 ## Configuration
 
