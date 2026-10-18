@@ -38,11 +38,7 @@ dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
 |---|---|---|
 | 《工贸企业重大事故隐患判定标准》 | 应急管理部令第10号 | HR-001, HR-002, HR-003, HR-004 |
 
-**Boundary:** this plugin maps each row of a **safety hazard ledger** onto candidate clauses of the
-major-accident-hazard determination standard, and reports which rows could not be mapped at all. It is
-not `dsh-emergency-plan` (which checks a plan's element completeness) and not a site inspection tool.
-It reads a ledger and produces **leads for review** — never a determination that something is or is not
-a major accident hazard, which needs a site visit and professional judgement.
+**边界（中文译文，以英文原文为准）：** 本插件把一份**安全隐患台账**的每一行映射到重大事故隐患判定标准的候选条款上，并报出完全无法映射的行。它不是 `dsh-emergency-plan`（后者核对预案的要素完备性），也不是现场检查工具。它读取台账并产出**供复核的线索**——从不判定某事项属于或不属于重大事故隐患；那需要现场核查与专业判断。
 
 > ### ⚠️ The most useful thing this plugin does is admit what it could not map
 >
