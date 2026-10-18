@@ -40,24 +40,13 @@ dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
 
 **边界（中文译文，以英文原文为准）：** 本插件把一份**安全隐患台账**的每一行映射到重大事故隐患判定标准的候选条款上，并报出完全无法映射的行。它不是 `dsh-emergency-plan`（后者核对预案的要素完备性），也不是现场检查工具。它读取台账并产出**供复核的线索**——从不判定某事项属于或不属于重大事故隐患；那需要现场核查与专业判断。
 
-> ### ⚠️ The most useful thing this plugin does is admit what it could not map
+> ### ⚠️ 这个插件最有用的地方，是承认它没能映射出什么（以英文原文为准）
 >
-> The failure mode of a keyword-based mapper is silent: a row that matches nothing simply vanishes, and
-> a reader concludes "no major hazards found". So `HR-001` inverts that: **every row that matched no
-> clause is listed explicitly**, with the reason it might have been missed — a different industry's
-> clause, a hazard type governed by other rules, or simply wording the keyword table does not carry yet.
-> The plugin's headline number is therefore "N rows are unmapped", not "0 hazards".
+> 基于关键词的映射器，其失效方式是静默的：一行什么都没匹配到，就那样消失了，读者于是得出「未发现重大事故隐患」的结论。所以 `HR-001` 把这件事反过来：**每一行没有匹配到任何条款的记录都会被明确列出**，并附上它可能被漏掉的原因——属于其他行业的条款、由其他规定管辖的隐患类型，或者只是关键词表尚未收录的表述。因此，这个插件的头号数字是「N 行未能映射」，而不是「0 处隐患」。
 >
-> **The standard was replaced, and its article numbers moved with it.** The determination standard in
-> force is **应急管理部令第10号《工贸企业重大事故隐患判定标准》** (adopted 2023-03-20, published
-> 2023-04-14, **in force 2023-05-15**). Its article 15 expressly repeals
-> 安监总管四〔2017〕129号《工贸行业重大生产安全事故隐患判定标准（2017版）》. This pack cites only
-> the 第10号令 article numbers, and a test asserts that the superseded 2017 number never appears.
+> **该标准已被替换，条文编号也随之改变。** 现行有效的判定标准是 **应急管理部令第10号《工贸企业重大事故隐患判定标准》**（2023-03-20 通过，2023-04-14 公布，**2023-05-15 施行**）。其第十五条明确废止 安监总管四〔2017〕129号《工贸行业重大生产安全事故隐患判定标准（2017版）》。本规则库只引用第10号令的条文编号，并且有测试断言：被取代的 2017 年文号绝不会出现。
 >
-> **Two things this plugin deliberately does not do.** It does not decide that a row *is* a major
-> hazard; and it does not classify hazards that article 2 hands to other regimes — hazardous
-> chemicals, fire, gas and special equipment are governed by *other* provisions, so a row touching them
-> is reported as "check the corresponding regulation instead", not mapped.
+> **有两件事这个插件刻意不做。** 它不判定某一行*就是*重大事故隐患；它也不对判定标准第二条交给其他规定管辖的隐患进行分类——危险化学品、消防、燃气和特种设备由*其他*规定管辖，因此涉及这些事项的行会被报成「改查相应规定」，而不是被映射。
 
 ## Compatibility
 
