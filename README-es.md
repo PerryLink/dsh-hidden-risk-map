@@ -20,13 +20,18 @@ dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
 
 ## Cómo se ve la salida
 
-![Terminal demo of dsh-hidden-risk-map: real output over its HR-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-hero.png)
+![Diagrama de flujo de dsh-hidden-risk-map: llamada → plugin → resultado.](docs/assets/dsh-hidden-risk-map-flow.svg)
 
-![Animated terminal demo of dsh-hidden-risk-map](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-demo.gif)
+*Resumen del flujo: llamada → plugin → resultado. Los ejemplos siguientes usan la superficie de comandos real.*
+
 
 Salida real de este plugin sobre su propio fixture de prueba `HR-004` — no es un montaje. El paquete de reglas no inventa citas, así que cada hallazgo nombra la cláusula aplicada y advierte que su texto no se obtuvo.
 
 ## Qué responde
+
+### Ejemplos
+
+La tabla siguiente es el conjunto de ejemplos: la primera fila es el caso detallado y las demás son casos breves.
 
 | Usted pregunta | Qué responde |
 |---|---|

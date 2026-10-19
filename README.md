@@ -20,13 +20,17 @@ dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
 
 ## What it looks like
 
-![Terminal demo of dsh-hidden-risk-map: real output over its HR-004 fixture](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-hero.png)
+![Workflow diagram for dsh-hidden-risk-map: call → plugin → result.](docs/assets/dsh-hidden-risk-map-flow.svg)
 
-![Animated terminal demo of dsh-hidden-risk-map](https://raw.githubusercontent.com/PerryLink/dsh-hidden-risk-map/main/docs/assets/dsh-hidden-risk-map-demo.gif)
+*Workflow overview: call → plugin → result. The examples below use the real command surface.*
 
-Real output from this plugin over its own `HR-004` test fixture — not a mock-up. The rule pack ships no invented quotations, so a finding names both the clause it applied and the fact that the clause text was not obtained.
+
 
 ## What it answers
+
+### Examples
+
+The table below is the example set: the first row is the detailed walkthrough, the remaining rows are short cases.
 
 | You ask | What it answers |
 |---|---|
