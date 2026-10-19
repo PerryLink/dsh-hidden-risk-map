@@ -34,6 +34,35 @@ Saída real deste plugin sobre o seu próprio fixture de teste `HR-004` — não
 
 A tabela abaixo é o conjunto de exemplos: a primeira linha é o caso detalhado e as demais são casos curtos.
 
+#### Saída detalhada
+
+**Ferramenta** `hidden_risk_map`
+
+**Entrada**
+
+~~~json
+{"entries":[{"row":1,"隐患描述":"车间地面有一处油污未及时清理"}]}
+~~~
+ 
+**Saída**
+
+~~~json
+{
+  "id": "dsh-hidden-risk-map.HR-001.e26f24c6",
+  "ruleId": "HR-001",
+  "severity": "warn",
+  "locator": {
+    "column": "隐患描述",
+    "row": 1
+  },
+  "found": "台账条目「车间地面有一处油污未及时清理」未能匹配到判定标准的任何条款关键词",
+  "expected": "台账条目应能对应到判定标准的具体条款，或确认不属于该标准的适用范围",
+  "fix": "人工核对：可能属于其他行业条款、属于危化品/消防/燃气/特种设备等另有规定的情形，或表述与条款用词差异较大（可在 keywords 中补充本企业习惯用词）"
+}
+~~~
+
+*Observado em `tests/fixtures/HR-001/HR-001-unsafe.json (cases.json expects HR-001 count 1); run via lib/index.mjs rules/hidden-risk-map.yaml`*
+
 | Você pergunta | O que ele responde |
 |---|---|
 | O registo foi executado e nenhum artigo foi assinalado — isso significa que não há riscos maiores? | Não. O número principal da ferramenta é a contagem de linhas que não conseguiu mapear, não um veredicto de zero riscos. `HR-001` lista cada linha cujo texto não correspondeu a nenhuma palavra-chave: um artigo de outra indústria, um tipo de risco regido por outras disposições, ou uma redação que a tabela de palavras-chave ainda não cobre. Apenas informa que não foi possível localizar artigo algum, e não decide se essa linha constitui ou não um risco maior. |

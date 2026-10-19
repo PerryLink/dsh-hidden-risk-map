@@ -33,6 +33,35 @@ dsh --profile <name> --dump-config | grep 'dsh-hidden-risk-map'
 
 The table below is the example set: the first row is the detailed walkthrough, the remaining rows are short cases.
 
+#### Detailed output
+
+**Tool** `hidden_risk_map`
+
+**Input**
+
+~~~json
+{"entries":[{"row":1,"隐患描述":"车间地面有一处油污未及时清理"}]}
+~~~
+ 
+**Output**
+
+~~~json
+{
+  "id": "dsh-hidden-risk-map.HR-001.e26f24c6",
+  "ruleId": "HR-001",
+  "severity": "warn",
+  "locator": {
+    "column": "隐患描述",
+    "row": 1
+  },
+  "found": "台账条目「车间地面有一处油污未及时清理」未能匹配到判定标准的任何条款关键词",
+  "expected": "台账条目应能对应到判定标准的具体条款，或确认不属于该标准的适用范围",
+  "fix": "人工核对：可能属于其他行业条款、属于危化品/消防/燃气/特种设备等另有规定的情形，或表述与条款用词差异较大（可在 keywords 中补充本企业习惯用词）"
+}
+~~~
+
+*Observed from `tests/fixtures/HR-001/HR-001-unsafe.json (cases.json expects HR-001 count 1); run via lib/index.mjs rules/hidden-risk-map.yaml`*
+
 | You ask | What it answers |
 |---|---|
 | The ledger was run and no clause was flagged — does that mean no major accident hazard? | No. The tool's headline count is the rows it could not map, not a zero-hazard verdict. `HR-001` lists every row whose text matched no clause keyword: a different industry's clause, a hazard type governed by other provisions, or wording the keyword table does not carry yet. It reports only that no clause could be located, and it does not decide whether that row is or is not a major accident hazard. |
