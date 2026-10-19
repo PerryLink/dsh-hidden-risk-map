@@ -3,6 +3,7 @@
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-hidden-risk-map?metric=downloads)](https://dshfind.com/en/plugins/PerryLink/dsh-hidden-risk-map?ref=badge)
 
 `dsh-hidden-risk-map` 读取一份安全隐患台账——每条已登记隐患一行，带台账实际有的列——按字面关键词匹配 `隐患描述` 一类字段的文字，把每一行指向《工贸企业重大事故隐患判定标准》的候选条款，并报出台账自身的缺口而不是任何结论：完全没有匹配到条款的行、命中的条款属于其他行业或涉及判定标准第二条交给其他规定的危险化学品、消防、燃气、特种设备事项的行、命中条目缺少本机构配置的整改闭环字段的行、以及被超过配置上限的条目数命中的条款。每条发现都注明它来自哪一条条款；输出只供人工复核，台账的关键词表是人工归纳的检索词而不是标准原文，无法执行的检查在 `skipped` 中说明原因，而不是静默通过。
 

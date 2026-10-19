@@ -8,6 +8,7 @@ dsh plugin --profile <name> add dsh-hidden-risk-map
 
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
+[![dshfind](https://dshfind.com/api/badge/PerryLink/dsh-hidden-risk-map?metric=downloads)](https://dshfind.com/en/plugins/PerryLink/dsh-hidden-risk-map?ref=badge)
 
 `dsh-hidden-risk-map` lê um registo de riscos —uma linha por risco registado, com as colunas que esse registo realmente traz— e encaminha cada linha para os artigos candidatos da norma chinesa de determinação de riscos maiores (《工贸企业重大事故隐患判定标准》, 应急管理部令第10号) através de correspondência literal de palavras-chave sobre o texto de campos como `隐患描述`, e reporta as lacunas do próprio registo, não um juízo: as linhas que não corresponderam a artigo nenhum, as linhas cuja correspondência pertence a outra indústria ou toca produtos químicos perigosos, incêndio, gás ou equipamento especial que o artigo 2 remete para outras disposições, as linhas correspondidas às quais faltam os campos de fecho da correção configurados pela instituição, e os artigos atingidos por mais linhas do que o limite configurado. Cada achado nomeia o artigo de onde veio; o resultado são pistas para revisão, a tabela de palavras-chave é um auxiliar editorial e não texto da norma, e a verificação que não pôde ser executada declara o motivo em `skipped` em vez de passar em silêncio.
 
