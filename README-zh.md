@@ -1,5 +1,14 @@
 # dsh-hidden-risk-map — 安全隐患台账条目到重大事故隐患判定标准候选条款的映射核对
 
+## 快速试跑（1 分钟）
+
+```bash
+node samples/quickstart/run.mjs --check
+```
+
+样例在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`；截图见 `docs/assets/quickstart.png`。
+
+
 [English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
 
 [![DSH Market](https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg)](https://dsh.market/)
