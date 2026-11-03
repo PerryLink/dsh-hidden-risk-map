@@ -1,6 +1,6 @@
 # dsh-hidden-risk-map — 安全隐患台账条目到重大事故隐患判定标准候选条款的映射核对
 
-## 快速试跑（1 分钟）
+### 快速试跑（1 分钟）
 
 ```bash
 node samples/quickstart/run.mjs --check
