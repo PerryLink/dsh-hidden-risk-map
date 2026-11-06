@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-dark.svg">
-  <img src="docs/assets/dsh-hidden-risk-map-flow-light.svg" width="100%" alt="dsh-hidden-risk-map डेटा प्रवाह: रजिस्टर entries[] → hidden_risk_map टूल → rules/hidden-risk-map.yaml नियम-पैक (HR-001..HR-004) → बिना मैप हुई पंक्तियाँ और skipped[] रिपोर्ट → मानवीय समीक्षा; कॉन्फ़िगरेशन rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs से">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-hero-en-dark.webp">
+  <img src="docs/assets/dsh-hidden-risk-map-hero-en-light.webp" width="100%" alt="dsh-hidden-risk-map बैनर: बाईं ओर प्लगइन की स्थिति और दो मूल्य-पंक्तियाँ; दाईं ओर सात नमूना पंक्तियों का मानचित्र — अमोनिया, स्टील, सीमित स्थान, धूल और ठेकेदार क्रमशः अनुच्छेद 12, 4, 13, 11 और 3 पर; कार्यशाला की तेल-पंक्ति किसी कीवर्ड से नहीं मिली और अनमैप्ड दिखाई गई; अमोनिया टैंक की अग्नि-सामग्री पंक्ति अनुच्छेद 2 से अन्य प्रावधानों को भेजी गई; पाद में 1 अनमैप्ड पंक्ति, issues[] 2 warn, skipped[] 3">
 </picture>
 
 # dsh-hidden-risk-map
@@ -42,6 +42,11 @@ dsh plugin --profile <name> add dsh-hidden-risk-map
 - **आप क्या देते हैं**: जाँच जिस मूल सामग्री पर काम करती है (तालिका, रजिस्टर या दस्तावेज़); मूल कभी नहीं बदला जाता। Excel को पहले JSON/YAML में बदला जा सकता है, चैट में भी यदि प्लेटफ़ॉर्म सहायता देता हो।
 - **यह क्या देता है**: सुरागों की सूची — कौन-सी पंक्ति, कौन-सा अनुच्छेद, क्यों; जो जाँचें नहीं चल सकीं वे कारण के साथ `skipped` में दर्ज होती हैं।
 - **यह क्या नहीं करता**: अनुपालन का निर्णय नहीं देता, दायित्व तय नहीं करता, समीक्षक का विकल्प नहीं है; यह भी तय नहीं करता कि कोई मामला बृहत् दुर्घटना-जोखिम है या नहीं — उसके लिए स्थल-निरीक्षण और पेशेवर निर्णय चाहिए।
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-hidden-risk-map-flow-v5-light.svg" width="100%" alt="dsh-hidden-risk-map संरचना: सात नमूना पंक्तियाँ सात परिणामों (अनुच्छेद 3, 4, 11, 12, 13, अनुच्छेद 2 अन्य प्रावधान और कोई धारा नहीं) के सामने मैट्रिक्स बनाती हैं; हर पंक्ति पहले शाब्दिक कीवर्ड पर गिरती है, अग्नि वाली पंक्ति अनुच्छेद 2 की सीमा पार करती है और बिना कीवर्ड वाली पंक्ति HR-001 अनमैप्ड निष्कर्ष के रूप में कोई-धारा-नहीं कॉलम में रहती है; नीचे चार नियमों की स्थिति और issues[] / skipped[] आउटपुट हैं; निर्णय समीक्षक का है">
+</picture>
 
 ## तीन चरणों में शुरुआत
 
@@ -339,7 +344,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"hidden_risk_map","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":3}
 ```
 
-नमूना इनपुट `samples/quickstart/input/` में, अपेक्षित आउटपुट `samples/quickstart/expected/result.json` में, और स्क्रीनशॉट `docs/assets/quickstart.png` में है। README चित्र [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) से `docs/assets/dsh-hidden-risk-map-flow-{light,dark}.svg` के रूप में बनते हैं; दोबारा चलाना सुरक्षित है। पुराने एकल-संस्करण चित्र बाहरी लिंक के लिए `docs/assets/` में रखे गए हैं, और README केवल नए युग्म का उल्लेख करते हैं।
+नमूना इनपुट `samples/quickstart/input/` में, अपेक्षित आउटपुट `samples/quickstart/expected/result.json` में, और स्क्रीनशॉट `docs/assets/quickstart.png` में है। README चित्र [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) से hero सेट `docs/assets/dsh-hidden-risk-map-hero-{zh,en}-{light,dark}.webp` और `docs/assets/dsh-hidden-risk-map-flow-v5-{light,dark}.svg` के रूप में बनते हैं; दोबारा चलाना सुरक्षित है। पुराने एकल-संस्करण चित्र बाहरी लिंक के लिए `docs/assets/` में रखे गए हैं, और README केवल नए हीरो + flow-v5 सेट का उल्लेख करते हैं।
 
 विषय: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `hidden`, `risk`, `map`
 

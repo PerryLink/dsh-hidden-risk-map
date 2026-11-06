@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-dark.svg">
-  <img src="docs/assets/dsh-hidden-risk-map-flow-light.svg" width="100%" alt="dsh-hidden-risk-map data flow: ledger entries[] → hidden_risk_map tool → rules/hidden-risk-map.yaml rule pack (HR-001..HR-004) → unmapped rows and skipped[] report → human review; config via rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-hero-en-dark.webp">
+  <img src="docs/assets/dsh-hidden-risk-map-hero-en-light.webp" width="100%" alt="dsh-hidden-risk-map banner: left is the plugin positioning and two value lines; right is a seven-row sample ledger map — ammonia, steel, confined space, dust and contractor rows hit Articles 12, 4, 13, 11 and 3; the workshop oil-spill row hits no keyword and is highlighted as unmapped; the ammonia-tank fire-equipment row is rerouted by Article 2; footer counts 1 unmapped row, issues[] 2 warn, skipped[] 3">
 </picture>
 
 # dsh-hidden-risk-map
@@ -42,6 +42,11 @@ dsh plugin --profile <name> add dsh-hidden-risk-map
 - **What you give it**: the source material the check works on (a table, register or document); the original is never modified. Excel can be converted to JSON/YAML first, in chat if the platform supports it.
 - **What it delivers**: a list of leads — which row, which article, why; checks that could not run are listed in `skipped` with the reason.
 - **What it does not do**: no compliance verdict, no liability finding, no replacement for the reviewer; it does not decide whether an item is a major accident hazard — that needs a site visit and professional judgement.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-hidden-risk-map-flow-v5-light.svg" width="100%" alt="dsh-hidden-risk-map structure: seven sample ledger rows against seven outcomes (Articles 3, 4, 11, 12, 13, Article 2 other provisions, and no clause) form a mapping matrix; each row lands on the first literal keyword hit, a row matching Article 12 but touching fire is handed across the Article 2 boundary, and a row with no keyword hit stays in the gap column as an HR-001 unmapped finding; below are the four rule states and the issues[] / skipped[] report exits, with the verdict left to the reviewer">
+</picture>
 
 ## Three-step setup
 
@@ -340,7 +345,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"hidden_risk_map","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":3}
 ```
 
-The sample input is in `samples/quickstart/input/`, the expected output in `samples/quickstart/expected/result.json`, and the screenshot in `docs/assets/quickstart.png`. README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) as `docs/assets/dsh-hidden-risk-map-flow-{light,dark}.svg`; re-running it is safe. The older single-skin flow and demo images are kept in `docs/assets/` for external deep links, and the READMEs reference only the new pair.
+The sample input is in `samples/quickstart/input/`, the expected output in `samples/quickstart/expected/result.json`, and the screenshot in `docs/assets/quickstart.png`. README images are generated programmatically by [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) as the hero set `docs/assets/dsh-hidden-risk-map-hero-{zh,en}-{light,dark}.webp` and `docs/assets/dsh-hidden-risk-map-flow-v5-{light,dark}.svg`; re-running it is safe. The older single-skin flow and demo images are kept in `docs/assets/` for external deep links, and the READMEs reference only the new hero + flow-v5 set.
 
 Topics: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `hidden`, `risk`, `map`
 

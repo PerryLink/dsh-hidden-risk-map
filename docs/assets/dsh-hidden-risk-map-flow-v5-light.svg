@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-labelledby="title desc">
+<title id="title">dsh-hidden-risk-map — ledger rows to candidate clauses</title>
+<desc id="desc">Seven ledger rows against seven outcomes. Rows map through literal keywords to industry clauses; article 2 reroutes regime rows; unmatched rows stay in the gap column as HR-001 findings. The rule-state rail and the two report exits follow.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f9f6fd"/><stop offset="1" stop-color="#e4eaf8"/></linearGradient>
+<radialGradient id="halo" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#4B67B4" stop-opacity="0.20"/><stop offset="1" stop-color="#4B67B4" stop-opacity="0"/></radialGradient>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="7" stdDeviation="11" flood-color="(43, 32, 74)" flood-opacity="0.16"/></filter>
+<pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1.4" cy="1.4" r="1.1" fill="#4B67B4" opacity="0.13"/></pattern>
+</defs>
+<rect x="0" y="0" width="1100" height="660" fill="url(#bg)" rx="22"/>
+<rect x="0" y="0" width="1100" height="430" fill="url(#halo)" opacity="0.75"/>
+<rect x="0" y="0" width="1100" height="660" fill="url(#dots)" rx="22" opacity="0.55"/>
+<text x="40" y="40" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4B67B4" font-weight="700" text-anchor="start" letter-spacing="1.5">STRUCTURE · LEDGER-TO-CLAUSE MATRIX</text>
+<text x="40" y="76" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="25" fill="#14151c" font-weight="700" text-anchor="start">Rows map to clauses; the unmapped stay visible</text>
+<text x="40" y="99" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11.5" fill="#4d5261" font-weight="400" text-anchor="start">dsh-hidden-risk-map · entries[] · literal keyword gate · article-2 boundary · issues[] / skipped[] · human review</text>
+<rect x="882" y="34" width="176" height="30" fill="#eceaf9" rx="15" stroke="#b9c2e8" stroke-width="1"/>
+<text x="970" y="53" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#4B67B4" font-weight="400" text-anchor="middle">ruleset 2026.1 · 4 rules</text>
+<line x1="40" y1="112" x2="1060" y2="112" stroke="#e9e4f2" stroke-width="1"/>
+<rect x="40" y="118" width="1020" height="328" fill="#ffffff" rx="20" stroke="#e4dfef" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="62" y="146" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="start" letter-spacing="0.8">MAPPING MATRIX</text>
+<text x="190" y="146" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">7 ledger rows × 7 outcomes · first keyword hit wins</text>
+<text x="1038" y="146" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="end">read-only · no verdict</text>
+<rect x="52" y="156" width="996" height="42" fill="#f5f2fb" rx="9"/>
+<text x="62" y="182" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4d5261" font-weight="700" text-anchor="start">ROW · 台账条目</text>
+<line x1="302" y1="156" x2="302" y2="426" stroke="#e9e4f2" stroke-width="1"/>
+<line x1="410" y1="198" x2="410" y2="426" stroke="#e9e4f2" stroke-width="1"/>
+<line x1="510" y1="198" x2="510" y2="426" stroke="#e9e4f2" stroke-width="1"/>
+<line x1="610" y1="198" x2="610" y2="426" stroke="#e9e4f2" stroke-width="1"/>
+<line x1="710" y1="198" x2="710" y2="426" stroke="#e9e4f2" stroke-width="1"/>
+<line x1="810" y1="198" x2="810" y2="426" stroke="#e9e4f2" stroke-width="1"/>
+<line x1="910" y1="198" x2="910" y2="426" stroke="#e9e4f2" stroke-width="1"/>
+<line x1="810" y1="158" x2="810" y2="428" stroke="#e5c89f" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.9"/>
+<line x1="910" y1="158" x2="910" y2="428" stroke="#e5c89f" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.9"/>
+<rect x="812" y="160" width="96" height="34" fill="#fdf4e6" rx="7"/>
+<rect x="912" y="160" width="96" height="34" fill="#fdf4e6" rx="7"/>
+<text x="360" y="175" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="middle">第三条</text>
+<text x="360" y="192" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="middle">通用</text>
+<text x="460" y="175" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="middle">第四条</text>
+<text x="460" y="192" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="middle">冶金</text>
+<text x="560" y="175" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="middle">第十一条</text>
+<text x="560" y="192" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="middle">粉尘涉爆</text>
+<text x="660" y="175" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="middle">第十二条</text>
+<text x="660" y="192" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="middle">液氨制冷</text>
+<text x="760" y="175" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="middle">第十三条</text>
+<text x="760" y="192" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="middle">有限空间</text>
+<text x="860" y="175" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#b45309" font-weight="700" text-anchor="middle">第二条</text>
+<text x="860" y="192" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#b45309" font-weight="400" text-anchor="middle">其他规定</text>
+<text x="960" y="175" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#b45309" font-weight="700" text-anchor="middle">无条款</text>
+<text x="960" y="192" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#b45309" font-weight="400" text-anchor="middle">GAP · HR-001</text>
+<text x="62" y="223" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">01</text>
+<text x="86" y="223" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="400" text-anchor="start">液氨机房未设泄漏报警</text>
+<circle cx="660" cy="218" r="5" fill="#4B67B4"/>
+<rect x="52" y="235" width="996" height="30" fill="#f7f5fc" rx="7" opacity="0.65"/>
+<text x="62" y="255" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">02</text>
+<text x="86" y="255" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="400" text-anchor="start">炼钢连铸未设事故钢水罐</text>
+<circle cx="460" cy="250" r="5" fill="#4B67B4"/>
+<rect x="52" y="267" width="996" height="30" fill="#fdf4e6" rx="7" opacity="0.55"/>
+<text x="62" y="287" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">03</text>
+<text x="86" y="287" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="400" text-anchor="start">车间地面油污未清理</text>
+<circle cx="960" cy="282" r="6" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="3 2"/>
+<rect x="52" y="299" width="996" height="30" fill="#f7f5fc" rx="7" opacity="0.65"/>
+<text x="62" y="319" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">04</text>
+<text x="86" y="319" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="400" text-anchor="start">有限空间未执行作业审批</text>
+<circle cx="760" cy="314" r="5" fill="#4B67B4"/>
+<text x="62" y="351" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">05</text>
+<text x="86" y="351" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="400" text-anchor="start">液氨罐区消防设施缺失</text>
+<circle cx="660" cy="346" r="5" fill="#ffffff" stroke="#4B67B4" stroke-width="2"/>
+<path d="M667 346 C 715 334, 760 334, 858 344" fill="none" stroke="#b45309" stroke-width="1.6" stroke-dasharray="4 3"/>
+<path d="M858 344 l-7 -4 l1 8 z" fill="#b45309"/>
+<circle cx="860" cy="346" r="5" fill="#b45309"/>
+<text x="760" y="360" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#b45309" font-weight="700" text-anchor="middle">HR-002</text>
+<rect x="52" y="363" width="996" height="30" fill="#f7f5fc" rx="7" opacity="0.65"/>
+<text x="62" y="383" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">06</text>
+<text x="86" y="383" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="400" text-anchor="start">铝镁粉尘除尘未泄爆</text>
+<circle cx="560" cy="378" r="5" fill="#4B67B4"/>
+<text x="62" y="415" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">07</text>
+<text x="86" y="415" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="400" text-anchor="start">承包单位未统一协调</text>
+<circle cx="360" cy="410" r="5" fill="#4B67B4"/>
+<text x="62" y="440" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">● clause hit    ○ art. 2 source → amber exit    ◌ no keyword hit → GAP (HR-001)    keyword table is an editorial aid, not standard text</text>
+<text x="40" y="477" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="10.5" fill="#7f8496" font-weight="700" text-anchor="start" letter-spacing="0.8">RULE STATES</text>
+<rect x="124" y="459" width="220" height="30" fill="#eceaf9" rx="9" stroke="#b9c2e8" stroke-width="1"/>
+<circle cx="139" cy="474" r="3" fill="#4B67B4"/>
+<text x="150" y="478" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#4B67B4" font-weight="400" text-anchor="start">HR-001 · warn · 1 gap</text>
+<rect x="352" y="459" width="220" height="30" fill="#eceaf9" rx="9" stroke="#b9c2e8" stroke-width="1"/>
+<circle cx="367" cy="474" r="3" fill="#4B67B4"/>
+<text x="378" y="478" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#4B67B4" font-weight="400" text-anchor="start">HR-002 · warn · 1 reroute</text>
+<rect x="580" y="459" width="220" height="30" fill="#fbfafe" rx="9" stroke="#e9e4f2" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="595" cy="474" r="3" fill="#7d8290"/>
+<text x="606" y="478" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7d8290" font-weight="400" text-anchor="start">HR-003 · skipped · unset</text>
+<rect x="808" y="459" width="220" height="30" fill="#fbfafe" rx="9" stroke="#e9e4f2" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="823" cy="474" r="3" fill="#7d8290"/>
+<text x="834" y="478" font-family="Consolas, SFMono-Regular, ui-monospace, monospace" font-size="11" fill="#7d8290" font-weight="400" text-anchor="start">HR-004 · skipped · 0</text>
+<rect x="40" y="502" width="1020" height="128" fill="#ffffff" rx="18" stroke="#e4dfef" stroke-width="1.5" filter="url(#shadow)"/>
+<text x="62" y="526" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="start">REPORT · two exits, one reviewer</text>
+<text x="1038" y="526" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#b45309" font-weight="700" text-anchor="end">mapping ≠ verdict</text>
+<rect x="62" y="540" width="3" height="80" fill="#4B67B4" rx="1.5"/>
+<text x="76" y="558" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#4B67B4" font-weight="700" text-anchor="start">issues[] · 2 warn</text>
+<text x="76" y="577" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4d5261" font-weight="400" text-anchor="start">HR-001  row 03  no keyword hit — unmapped row</text>
+<text x="76" y="594" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4d5261" font-weight="400" text-anchor="start">HR-002  row 05  article 2 — other provisions</text>
+<text x="76" y="611" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">every issue: found · expected · fix · basis</text>
+<line x1="554" y1="540" x2="554" y2="620" stroke="#e9e4f2" stroke-width="1"/>
+<text x="572" y="558" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="13" fill="#14151c" font-weight="700" text-anchor="start">skipped[] · 3</text>
+<text x="572" y="577" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4d5261" font-weight="400" text-anchor="start">HR-002  industry unset — industry check not run</text>
+<text x="572" y="594" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4d5261" font-weight="400" text-anchor="start">HR-003  requiredFields empty — rule off</text>
+<text x="572" y="611" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#4d5261" font-weight="400" text-anchor="start">HR-004  maxHitsPerClause 0 — rule off</text>
+<text x="40" y="648" font-family="Microsoft YaHei, Noto Sans SC, PingFang SC, Segoe UI, sans-serif" font-size="11" fill="#7f8496" font-weight="400" text-anchor="start">literal keywords are an editorial aid, not standard text · excerpts must be verbatim · the verdict stays with the reviewer</text>
+</svg>

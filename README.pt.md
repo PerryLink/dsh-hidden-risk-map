@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-dark.svg">
-  <img src="docs/assets/dsh-hidden-risk-map-flow-light.svg" width="100%" alt="Fluxo de dados de dsh-hidden-risk-map: registo entries[] → ferramenta hidden_risk_map → pacote de regras rules/hidden-risk-map.yaml (HR-001..HR-004) → relatório de linhas não mapeadas e skipped[] → revisão humana; configuração via rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-hero-en-dark.webp">
+  <img src="docs/assets/dsh-hidden-risk-map-hero-en-light.webp" width="100%" alt="Banner do dsh-hidden-risk-map: à esquerda, o posicionamento e duas linhas de valor; à direita, o mapa de sete linhas de exemplo: amônia, aço, espaço confinado, poeira e empreiteiro apontam para os artigos 12, 4, 13, 11 e 3; a linha de óleo no piso não casa com nenhuma palavra-chave e é destacada como não mapeada; a linha de equipamentos de incêndio na área de amônia é redirecionada pelo artigo 2; o rodapé conta 1 linha não mapeada, issues[] 2 warn e skipped[] 3">
 </picture>
 
 # dsh-hidden-risk-map
@@ -42,6 +42,11 @@ dsh plugin --profile <name> add dsh-hidden-risk-map
 - **O que entrega**: o material original sobre o qual a verificação trabalha (uma tabela, um registo ou um documento); o original nunca é modificado. O Excel pode ser convertido primeiro em JSON/YAML, também no chat se a plataforma o permitir.
 - **O que devolve**: uma lista de pistas — que linha, que artigo, porquê; as verificações que não puderam ser executadas são listadas em `skipped` com o motivo.
 - **O que não faz**: não dita conformidade, não atribui responsabilidade e não substitui o revisor; também não decide se um assunto constitui um risco maior — isso exige inspeção no local e juízo profissional.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-hidden-risk-map-flow-v5-light.svg" width="100%" alt="Diagrama do dsh-hidden-risk-map: sete linhas de exemplo contra sete resultados (artigos 3, 4, 11, 12, 13, artigo 2 outras disposições e sem cláusula) formam uma matriz; cada linha cai na primeira palavra-chave, a que toca incêndio cruza o limite do artigo 2 e a que não coincide fica na coluna sem cláusula como achado HR-001; abaixo, o estado das quatro regras e as saídas issues[] / skipped[]; a conclusão fica com o revisor">
+</picture>
 
 ## Instalação em três passos
 
@@ -339,7 +344,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"hidden_risk_map","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":3}
 ```
 
-A entrada do teste está em `samples/quickstart/input/`, a saída esperada em `samples/quickstart/expected/result.json` e a captura em `docs/assets/quickstart.png`. As imagens do README são geradas por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) como `docs/assets/dsh-hidden-risk-map-flow-{light,dark}.svg`; voltar a executá-lo é seguro. As imagens antigas de versão única ficam em `docs/assets/` para links externos, e os README citam apenas o par novo.
+A entrada do teste está em `samples/quickstart/input/`, a saída esperada em `samples/quickstart/expected/result.json` e a captura em `docs/assets/quickstart.png`. As imagens do README são geradas por [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) (Python + Pillow) como o conjunto hero `docs/assets/dsh-hidden-risk-map-hero-{zh,en}-{light,dark}.webp` e `docs/assets/dsh-hidden-risk-map-flow-v5-{light,dark}.svg`; voltar a executá-lo é seguro. As imagens antigas de versão única ficam em `docs/assets/` para links externos, e os README citam apenas o conjunto novo (hero + flow-v5).
 
 Tópicos: `deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `hidden`, `risk`, `map`
 

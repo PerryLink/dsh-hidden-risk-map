@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-dark.svg">
-  <img src="docs/assets/dsh-hidden-risk-map-flow-light.svg" width="100%" alt="dsh-hidden-risk-map 数据流：台账 entries[] → hidden_risk_map 工具 → rules/hidden-risk-map.yaml 规则包（HR-001..HR-004）→ 未映射行与 skipped[] 报告 → 人工复核；配置经 rulesFile · disabledRules · onlyRules · skipNotes · timeoutMs 注入">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-hidden-risk-map-hero-zh-light.webp" width="100%" alt="dsh-hidden-risk-map 横幅：左侧是插件定位与两行价值句；右侧是示例台账七行的映射卡——液氨、炼钢、有限空间、粉尘、承包单位分别命中第十二、第四、第十三、第十一、第三条，车间油污没有任何关键词命中而高亮为未映射，液氨罐区消防设施缺失标出第二条改查其他规定；页脚统计未映射 1 行、issues[] 2 warn、skipped[] 3">
 </picture>
 
 # dsh-hidden-risk-map
@@ -42,6 +42,11 @@ dsh plugin --profile <name> add dsh-hidden-risk-map
 - **你交什么**：这项核对用到的原始材料（表格、清单或文书）；不改原件。Excel 可先转成 JSON/YAML，对话里也能代转。
 - **它交什么**：一份「哪一行、差哪一条、为什么」的线索清单；没能执行的检查逐条列入 `skipped` 并写明原因。
 - **它不做什么**：不判合规、不认定责任、不替代审核人；也不判定某事项是否构成重大事故隐患——那需要现场核查与专业判断。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-hidden-risk-map-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-hidden-risk-map-flow-v5-light.svg" width="100%" alt="dsh-hidden-risk-map 结构图：七行示例台账与七个结果列（第三、第四、第十一、第十二、第十三、第二条其他规定、无条款）组成映射矩阵；每行按首个字面关键词命中落到行业条款，第十二条命中后若涉及消防等则越过第二条边界改查其他规定，完全没有关键词命中的行留在无条款列并成为 HR-001 未映射发现；下方是四条规则的状态栏和 issues[] / skipped[] 两个报告出口，结论留给审核人">
+</picture>
 
 ## 三步上手
 
@@ -328,7 +333,7 @@ node samples/quickstart/run.mjs --json
 # => {"tool":"hidden_risk_map","issueCount":1,"summary":{"error":0,"warn":1,"info":0},"skippedCount":3}
 ```
 
-样例输入在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`，截图见 `docs/assets/quickstart.png`。README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Python + Pillow），出 `docs/assets/dsh-hidden-risk-map-flow-{light,dark}.svg` 深浅双版，可重复执行；旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的双版。
+样例输入在 `samples/quickstart/input/`，期望输出在 `samples/quickstart/expected/result.json`，截图见 `docs/assets/quickstart.png`。README 配图由 [`scripts/gen-readme-assets.py`](scripts/gen-readme-assets.py) 程序化生成（Python + Pillow），出 `docs/assets/dsh-hidden-risk-map-hero-{zh,en}-{light,dark}.webp` 与 `docs/assets/dsh-hidden-risk-map-flow-v5-{light,dark}.svg`，可重复执行；旧的单版流程图与演示图保留在 `docs/assets/` 供外链使用，README 只引用新生成的 hero 与 flow-v5。
 
 Topics：`deepseek-harness`, `dsh`, `dsh-plugin`, `cordis`, `hidden`, `risk`, `map`
 
