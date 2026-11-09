@@ -1,6 +1,6 @@
 # dsh-hidden-risk-map — Hazard ledger entry mapping onto candidate clauses of the major-accident-hazard determination standard
 
-[English](README.md) · [简体中文](README-zh.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+[English](README.md) · [简体中文](README-zh.md)
 
 ```sh
 dsh plugin --profile <name> add dsh-hidden-risk-map
