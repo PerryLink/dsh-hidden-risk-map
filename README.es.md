@@ -48,6 +48,11 @@ dsh plugin --profile <name> add dsh-hidden-risk-map
   <img src="docs/assets/dsh-hidden-risk-map-flow-v5-light.svg" width="100%" alt="Diagrama de dsh-hidden-risk-map: siete filas de ejemplo frente a siete resultados (artículos 3, 4, 11, 12, 13, artículo 2 otras disposiciones y sin cláusula) forman una matriz; cada fila cae en la primera palabra clave, la que toca incendio cruza el límite del artículo 2 y la que no coincide queda en la columna sin cláusula como hallazgo HR-001; abajo, el estado de las cuatro reglas y las salidas issues[] / skipped[]; la conclusión queda en el revisor">
 </picture>
 
+![dsh-hidden-risk-map: ejecución real de terminal](docs/assets/dsh-hidden-risk-map-demo.gif)
+
+*Repetición animada de una ejecución real registrada en este repositorio.*
+
+
 ## Instalación en tres pasos
 
 1. **Instalar** (elija un canal):

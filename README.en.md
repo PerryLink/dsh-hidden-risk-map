@@ -108,6 +108,10 @@ Search for "Safety Compliance Suite" in WorkBuddy / Coze (this check is one part
 
 ### Examples
 
+![dsh-hidden-risk-map: real terminal run](docs/assets/dsh-hidden-risk-map-demo.gif)
+
+*Animated replay of a real run recorded in this repository.*
+
 These are the plugin's real entry points; install once, then call one. The detailed walkthrough below is the plugin's **real output** on its own `HR-001` fixture, not an illustration; the table that follows covers the shorter cases.
 
 **Detailed example** — tool `hidden_risk_map`, input:
