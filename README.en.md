@@ -7,6 +7,8 @@
 
 # dsh-hidden-risk-map
 
+Current version `0.2.13`.
+
 **Map every row of a safety hazard ledger onto candidate clauses of the major-accident-hazard determination standard — see which row is missing which clause, and why; the verdict stays with the reviewer.**
 
 A data checker for DeepSeek Harness: it reads one safety hazard ledger (one row per recorded hazard, with the columns the ledger actually carries), runs the packaged versioned rule pack (HR-001..HR-004) over literal keyword matching, and reports only the gaps it can point to row by row — no compliance verdict, no liability finding.
