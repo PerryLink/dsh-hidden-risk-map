@@ -11,6 +11,8 @@
 
 Verificador de dados para o DeepSeek Harness: lê um registo de riscos (uma linha por risco registado, com as colunas que esse registo realmente traz), aplica o pacote de regras versionado (HR-001..HR-004) por correspondência literal de palavras-chave e só relata as lacunas que consegue apontar linha a linha — sem veredicto de conformidade nem atribuição de responsabilidade.
 
+Última verificação: DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Instalação](#instalação-em-três-passos) · [Configuração](#configuração) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
@@ -51,7 +53,6 @@ dsh plugin --profile <name> add dsh-hidden-risk-map
 ![dsh-hidden-risk-map: execução real de terminal](docs/assets/dsh-hidden-risk-map-demo.gif)
 
 *Repetição animada de uma execução real registrada neste repositório.*
-
 
 ## Instalação em três passos
 

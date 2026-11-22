@@ -11,6 +11,8 @@
 
 A data checker for DeepSeek Harness: it reads one safety hazard ledger (one row per recorded hazard, with the columns the ledger actually carries), runs the packaged versioned rule pack (HR-001..HR-004) over literal keyword matching, and reports only the gaps it can point to row by row — no compliance verdict, no liability finding.
 
+Last verified on DeepSeek Harness `dsh-v0.2.3-alpha.1` (2026-11-22).
+
 [Install](#three-step-setup) · [Configuration](#configuration) · [FAQ](#faq) · [简体中文](README.md) · [English](README.en.md) · [Español](README.es.md) · [Português](README.pt.md) · [हिन्दी](README.hi.md)
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-3366CC?style=flat-square&labelColor=2B3245)](LICENSE)
